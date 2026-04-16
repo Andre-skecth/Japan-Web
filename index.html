@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Belajar bahasa Jepang dengan cara yang menyenangkan — Hiragana, Katakana, Kanji, Salam, Angka, Perkenalan, dan Tata Bahasa." />
+  <title>Nihongo Wiki - Belajar Bahasa Jepang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── HERO SCREEN ── -->
+  <div id="hero-screen" class="hero-screen">
+    <div class="hero-img-wrap">
+      <img src="tokyo-pagoda.jpg" alt="Tokyo Pagoda" class="hero-img" />
+    </div>
+    <div class="hero-overlay">
+      <div class="hero-top-bar">
+        <span class="hero-top-brand">⛩ NIHONGOWIKI</span>
+        <span class="hero-top-tag">日本語学習</span>
+      </div>
+      <div class="hero-center">
+        <div class="hero-tokyo-text">JAPAN</div>
+        <div class="hero-divider"></div>
+      </div>
+      <div class="hero-bottom">
+        <h1 class="hero-title">Belajar Bahasa<br /><span class="hero-title-accent">Jepang</span> Mulai Sekarang</h1>
+        <p class="hero-sub">Hiragana · Katakana · Kanji · Salam · Angka · Perkenalan · Tata Bahasa</p>
+        <button class="hero-btn" onclick="goToMain()">Mulai Belajar →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN APP ── -->
+  <div id="app-shell" class="app-shell" style="opacity:0;pointer-events:none;">
+
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="app-header-inner">
+        <button class="app-logo" onclick="goToHero()">
+          <span class="app-logo-icon">⛩</span>
+          NIHONGO<span class="app-logo-light">WIKI</span>
+        </button>
+        <span class="app-header-tag">日本語学習</span>
+        <div class="app-header-right">
+          <div class="header-search-wrap">
+            <span class="header-search-icon">🔍</span>
+            <input
+              type="text"
+              id="header-search"
+              class="header-search-input"
+              placeholder="Cari materi..."
+              oninput="onSearch(this.value)"
+            />
+            <button class="header-search-clear" id="header-clear-btn" onclick="clearSearch()">✕</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <div class="app-body">
+
+      <!-- SIDEBAR -->
+      <aside class="app-sidebar">
+        <div class="sidebar-brand">
+          <span class="sidebar-brand-jp">日本語</span>
+          <span class="sidebar-brand-label">Wiki</span>
+        </div>
+        <nav class="sidebar-nav" id="main-nav"></nav>
+        <p class="sidebar-no-results" id="no-results" style="display:none;">Materi tidak ditemukan.</p>
+        <div class="sidebar-status">
+          <div class="sidebar-status-label">Sedang dibaca</div>
+          <div class="sidebar-status-value" id="current-label">—</div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="app-main">
+        <div class="app-main-topbar">
+          <div class="app-main-breadcrumb">
+            <span>Nihongo Wiki</span>
+            <span class="breadcrumb-sep">›</span>
+            <span id="breadcrumb-current">Beranda</span>
+          </div>
+        </div>
+        <div class="article-h1" id="article-h1-area">
+          <span id="article-icon">🏠</span>
+          <span id="article-title">Beranda &amp; Fakta Unik</span>
+        </div>
+        <div class="wiki-content" id="main-content"></div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
