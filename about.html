@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tentang Nihongo Wiki dan pembuatnya, Johanes Andrew Wijaya." />
+  <title>Nihongo Wiki - Tentang Saya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="app-logo" href="index.html">
+        <span class="app-logo-icon">⛩</span>
+        NIHONGO<span class="app-logo-light">WIKI</span>
+      </a>
+      <span class="app-header-tag">日本語学習</span>
+      <div class="app-header-links">
+        <a class="app-header-link" href="index.html">Beranda</a>
+        <a class="app-header-link" href="contact.html">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-body" style="padding-top: 2rem;">
+    <main class="app-main" style="border-left:none; min-height:auto; padding-bottom:2rem;">
+      <div class="app-main-topbar" style="margin: 0 2.5rem 1rem;">
+        <div class="app-main-breadcrumb">
+          <span>Nihongo Wiki</span>
+          <span class="breadcrumb-sep">›</span>
+          <span>Tentang Saya</span>
+        </div>
+      </div>
+      <div class="article-h1" style="margin: 0 2.5rem 1rem;">
+        <span id="article-icon">ℹ️</span>
+        <span id="article-title">Tentang Saya</span>
+      </div>
+      <div class="wiki-content" style="margin: 0 2.5rem 2rem; padding: 2rem;">
+        <p>Saya <strong>Johanes Andrew Wijaya</strong>, pembuat Nihongo Wiki. Saya membuat website ini untuk membantu pelajar Indonesia memulai bahasa Jepang dengan cara yang mudah, terstruktur, dan menyenangkan.</p>
+        <div class="fact-box">
+          <h4>🎯 Tujuan Website</h4>
+          <p>Tujuannya adalah membantu kamu memahami dasar Hiragana, Katakana, Kanji, salam, angka, perkenalan, dan tata bahasa Jepang tanpa merasa terlalu berat.</p>
+        </div>
+        <div class="fact-box">
+          <h4>💡 Motivasi Saya</h4>
+          <p>Motivasi saya adalah membuat pembelajaran menjadi lebih ramah pemula. Saya percaya bahwa pengguna akan lebih cepat memahami jika materi disajikan seperti artikel wiki yang jelas dan mudah dinavigasi.</p>
+        </div>
+        <div class="method-card">
+          <h4>✨ Harapan Saya</h4>
+          <p>Saya berharap Nihongo Wiki bisa menjadi tempat pertama yang kamu kunjungi saat ingin mulai belajar bahasa Jepang. Semoga kamu semakin percaya diri dan senang belajar setiap hari.</p>
+        </div>
+        <div class="contact-card" style="margin-top:1rem;">
+          <h2>Ingin Hubungi Saya?</h2>
+          <p>Klik tombol Kontak di atas untuk langsung masuk ke halaman kontak.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.remove("page-exit");
+      document.querySelectorAll('a[href$=".html"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+          var href = link.getAttribute("href");
+          if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return;
+          event.preventDefault();
+          document.body.classList.add("page-exit");
+          setTimeout(function () { window.location.href = href; }, 260);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

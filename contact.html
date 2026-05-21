@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kontak Johanes Andrew Wijaya untuk dukungan belajar bahasa Jepang." />
+  <title>Nihongo Wiki - Kontak</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="app-logo" href="index.html">
+        <span class="app-logo-icon">⛩</span>
+        NIHONGO<span class="app-logo-light">WIKI</span>
+      </a>
+      <span class="app-header-tag">日本語学習</span>
+      <div class="app-header-links">
+        <a class="app-header-link" href="index.html">Beranda</a>
+        <a class="app-header-link" href="about.html">Tentang</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-body" style="padding-top: 2rem;">
+    <main class="app-main" style="border-left:none; min-height:auto; padding-bottom:2rem;">
+      <div class="app-main-topbar" style="margin: 0 2.5rem 1rem;">
+        <div class="app-main-breadcrumb">
+          <span>Nihongo Wiki</span>
+          <span class="breadcrumb-sep">›</span>
+          <span>Kontak</span>
+        </div>
+      </div>
+      <div class="article-h1" style="margin: 0 2.5rem 1rem;">
+        <span id="article-icon">📞</span>
+        <span id="article-title">Kontak Saya</span>
+      </div>
+      <div class="wiki-content" style="margin: 0 2.5rem 2rem; padding: 2rem;">
+        <div class="contact-card">
+          <h2>Johanes Andrew Wijaya</h2>
+          <p>Hubungi saya untuk tanya materi, saran pembelajaran, atau bantuan belajar bahasa Jepang.</p>
+          <div class="contact-detail">
+            <span>📱 Nomor Telepon</span>
+            <strong><a href="tel:081457676755">081457676755</a></strong>
+          </div>
+          <div class="contact-detail">
+            <span>💬 WhatsApp</span>
+            <strong><a href="https://wa.me/6281457676755" target="_blank">081457676755</a></strong>
+          </div>
+        </div>
+        <div class="fact-box">
+          <h4>🗂️ Informasi</h4>
+          <p>Gunakan halaman ini jika ingin bertanya langsung atau meminta saran materi yang sesuai dengan level belajarmu.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.remove("page-exit");
+      document.querySelectorAll('a[href$=".html"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+          var href = link.getAttribute("href");
+          if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return;
+          event.preventDefault();
+          document.body.classList.add("page-exit");
+          setTimeout(function () { window.location.href = href; }, 260);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

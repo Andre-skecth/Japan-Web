@@ -353,6 +353,29 @@ const lessons = {
       </div>
     `
   },
+  tentang: {
+    title: "Tentang Saya",
+    icon: "ℹ️",
+    content: `
+      <p style="margin-bottom:1rem;color:#475569;line-height:1.75;">Halo! Saya Johanes Andrew Wijaya, pembuat Nihongo Wiki. Saya membuat website ini karena ingin membantu pelajar Indonesia memahami bahasa Jepang dengan cara yang lebih menarik dan mudah dicerna.</p>
+      <div class="fact-box">
+        <h4>🎯 Tujuan Pembuatan</h4>
+        <p>Website ini dibuat untuk memberikan dasar yang kuat bagi pemula yang ingin belajar Hiragana, Katakana, Kanji, salam, angka, perkenalan, dan tata bahasa Jepang.</p>
+      </div>
+      <div class="fact-box">
+        <h4>💡 Motivasi Saya</h4>
+        <p>Saya percaya bahwa belajar bahasa Jepang tidak harus membosankan. Motivasi saya adalah membuat materi yang dirancang seperti wiki, jadi kamu bisa belajar dengan cepat dan kembali lagi tanpa ragu.</p>
+      </div>
+      <div class="method-card">
+        <h4>✨ Harapan Website</h4>
+        <p>Saya berharap Nihongo Wiki menjadi tempat pertama yang dicari oleh pemula sebelum memutuskan belajar lebih jauh. Tujuannya adalah agar kamu dapat memulai dengan percaya diri dan merasa seru saat mempelajari bahasa Jepang.</p>
+      </div>
+      <div class="contact-card" style="margin-top:1rem;">
+        <h2>Ingin Terhubung?</h2>
+        <p>Kalau kamu punya saran materi atau ingin bertanya langsung, kunjungi halaman Kontak saya di sebelah.</p>
+      </div>
+    `
+  },
   kontak: {
     title: "Kontak Saya",
     icon: "📞",
@@ -382,6 +405,7 @@ const navItems = [
   { id: "angka",       label: "Angka Dasar 1-10",       icon: "🔢" },
   { id: "perkenalan",  label: "Perkenalan Diri",         icon: "👤" },
   { id: "tata_bahasa", label: "Tata Bahasa Dasar",      icon: "📖" },
+  { id: "tentang",     label: "Tentang Saya",           icon: "ℹ️" },
   { id: "kontak",      label: "Kontak Saya",            icon: "📞" },
 ];
 
